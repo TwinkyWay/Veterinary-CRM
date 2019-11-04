@@ -1,0 +1,277 @@
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 500 22px Calibri; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: #aeb3b7; }
+
+header {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  background: lightgray;
+  padding-top: 5px; }
+  header .header__login img {
+    margin: 0 10px;
+    vertical-align: top; }
+  header span {
+    margin: -5px 10px 0 10px;
+    vertical-align: super; }
+  header form {
+    display: inline-block;
+    vertical-align: super;
+    cursor: pointer; }
+    header form input[type='submit'], header form .issue button[type='submit'], .issue header form button[type='submit'] {
+      cursor: pointer;
+      height: 25px;}
+
+.login_form {
+  margin: auto;
+  min-width: 300px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid silver;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  .login_form select, .login_form input[type='text'], .login_form .issue button[type='text'], .issue .login_form button[type='text'], .login_form input[type='submit'], .login_form .issue button[type='submit'], .issue .login_form button[type='submit'] {
+    display: block;
+    margin: 15px auto;
+    vertical-align: middle;
+    width: 250px;
+    height: 30px;
+    font: 500 22px Calibri; }
+  .login_form input[type='text'], .login_form .issue button[type='text'], .issue .login_form button[type='text'] {
+    width: 240px;
+    height: 26px;
+    padding: 0 0 0 5px; }
+
+.main_registration, .new_owner {
+  text-align: center;
+  margin: 0 auto;
+  font: 500 30px Calibri;}
+  .main_registration h2, .new_owner h2 {
+    margin: 100px auto 40px auto; }
+  .main_registration button, .new_owner button {
+    cursor: pointer;
+    margin: 80px;
+    font: 500 22px Calibri; }
+
+.find {
+  display: flex; }
+  .find input[type='search'] {
+    height: 30px;
+    width: 300px; }
+  .find input[type='submit'] {
+    height: 30px;
+    width: 100px;
+    font: 500 22px Calibri;
+    vertical-align: middle;}
+  .find .by_animal {
+    margin-left: 60px; }
+
+.new_owner form {
+  padding: 10px 0;
+  width: 100%;
+  font: 500 25px Calibri;}
+  .new_owner form label {
+    display: flex;
+    margin: 30px;
+    justify-content: space-between; }
+    .new_owner form label input, .new_owner form label .issue button, .issue .new_owner form label button {
+      width: 250px;
+      margin-left: 30px; }
+  .new_owner form input[type='submit'], .new_owner form .issue button[type='submit'], .issue .new_owner form button[type='submit'] {
+    margin: 10px;
+    width: 90px;
+    height: 30px;
+    font: 500 22px Calibri;}
+
+.owner_info {
+  min-width: 50%;
+  width: auto;
+  margin-bottom: 10px;
+  font: 500 25px Calibri;}
+  .owner_info legend {
+    font-weight: 900;
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center; }
+  .owner_info form {
+    display: flex;
+    justify-content: space-between; }
+    .owner_info form label {
+      margin: 0 15px; }
+    .owner_info form input, .owner_info form .issue button, .issue .owner_info form button {
+      width: 250px;
+      height: 34px;
+      padding: 0 5px;
+      margin: 0 10px;
+      font: 500 22px Calibri;}
+    .owner_info form select, .owner_info form .login_form input[type='text'], .login_form .owner_info form input[type='text'], .owner_info form .login_form .issue button[type='text'], .login_form .issue .owner_info form button[type='text'], .owner_info form .issue .login_form button[type='text'], .issue .login_form .owner_info form button[type='text'], .owner_info form .login_form input[type='submit'], .login_form .owner_info form input[type='submit'], .owner_info form .login_form .issue button[type='submit'], .login_form .issue .owner_info form button[type='submit'], .owner_info form .issue .login_form button[type='submit'], .issue .login_form .owner_info form button[type='submit'] {
+      width: 200px;
+      height: 34px;
+      font: 500 22px Calibri;}
+
+.pet {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .pet__info, .pet__new, .pet__inspection, .pet__ambulance, .pet__ambulance-doctor {
+    height: 100%;
+    display: flex;
+    margin: 20px 3%; }
+    .pet__info legend, .pet__new legend, .pet__inspection legend, .pet__ambulance legend, .pet__ambulance-doctor legend {
+      font: 900 22px Calibri;
+      padding: 0 20px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 5px; }
+    .pet__info label, .pet__new label, .pet__inspection label, .pet__ambulance label, .pet__ambulance-doctor label {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      font: 500 25px Calibri; }
+      .pet__info label select, .pet__new label select, .pet__inspection label select, .pet__ambulance label select, .pet__ambulance-doctor label select, .pet__info label .login_form input[type='text'], .login_form .pet__info label input[type='text'], .pet__new label .login_form input[type='text'], .login_form .pet__new label input[type='text'], .pet__inspection label .login_form input[type='text'], .login_form .pet__inspection label input[type='text'], .pet__ambulance label .login_form input[type='text'], .login_form .pet__ambulance label input[type='text'], .pet__ambulance-doctor label .login_form input[type='text'], .login_form .pet__ambulance-doctor label input[type='text'], .pet__info label .login_form .issue button[type='text'], .login_form .issue .pet__info label button[type='text'], .pet__new label .login_form .issue button[type='text'], .login_form .issue .pet__new label button[type='text'], .pet__inspection label .login_form .issue button[type='text'], .login_form .issue .pet__inspection label button[type='text'], .pet__ambulance label .login_form .issue button[type='text'], .login_form .issue .pet__ambulance label button[type='text'], .pet__ambulance-doctor label .login_form .issue button[type='text'], .login_form .issue .pet__ambulance-doctor label button[type='text'], .pet__info label .issue .login_form button[type='text'], .issue .login_form .pet__info label button[type='text'], .pet__new label .issue .login_form button[type='text'], .issue .login_form .pet__new label button[type='text'], .pet__inspection label .issue .login_form button[type='text'], .issue .login_form .pet__inspection label button[type='text'], .pet__ambulance label .issue .login_form button[type='text'], .issue .login_form .pet__ambulance label button[type='text'], .pet__ambulance-doctor label .issue .login_form button[type='text'], .issue .login_form .pet__ambulance-doctor label button[type='text'], .pet__info label .login_form input[type='submit'], .login_form .pet__info label input[type='submit'], .pet__new label .login_form input[type='submit'], .login_form .pet__new label input[type='submit'], .pet__inspection label .login_form input[type='submit'], .login_form .pet__inspection label input[type='submit'], .pet__ambulance label .login_form input[type='submit'], .login_form .pet__ambulance label input[type='submit'], .pet__ambulance-doctor label .login_form input[type='submit'], .login_form .pet__ambulance-doctor label input[type='submit'], .pet__info label .login_form .issue button[type='submit'], .login_form .issue .pet__info label button[type='submit'], .pet__new label .login_form .issue button[type='submit'], .login_form .issue .pet__new label button[type='submit'], .pet__inspection label .login_form .issue button[type='submit'], .login_form .issue .pet__inspection label button[type='submit'], .pet__ambulance label .login_form .issue button[type='submit'], .login_form .issue .pet__ambulance label button[type='submit'], .pet__ambulance-doctor label .login_form .issue button[type='submit'], .login_form .issue .pet__ambulance-doctor label button[type='submit'], .pet__info label .issue .login_form button[type='submit'], .issue .login_form .pet__info label button[type='submit'], .pet__new label .issue .login_form button[type='submit'], .issue .login_form .pet__new label button[type='submit'], .pet__inspection label .issue .login_form button[type='submit'], .issue .login_form .pet__inspection label button[type='submit'], .pet__ambulance label .issue .login_form button[type='submit'], .issue .login_form .pet__ambulance label button[type='submit'], .pet__ambulance-doctor label .issue .login_form button[type='submit'], .issue .login_form .pet__ambulance-doctor label button[type='submit'] {
+        width: 250px;
+        margin-left: 5px;
+        font: 500 20px Calibri;}
+    .pet__info input, .pet__new input, .pet__inspection input, .pet__ambulance input, .pet__ambulance-doctor input, .pet__info .issue button, .issue .pet__info button, .pet__new .issue button, .issue .pet__new button, .pet__inspection .issue button, .issue .pet__inspection button, .pet__ambulance .issue button, .issue .pet__ambulance button, .pet__ambulance-doctor .issue button, .issue .pet__ambulance-doctor button {
+      margin-left: 10px;
+      width: 246px;
+      font: 500 20px Calibri;}
+      .pet__info input[type='submit'], .pet__new input[type='submit'], .pet__inspection input[type='submit'], .pet__ambulance input[type='submit'], .pet__ambulance-doctor input[type='submit'], .pet__info .issue button[type='submit'], .issue .pet__info button[type='submit'], .pet__new .issue button[type='submit'], .issue .pet__new button[type='submit'], .pet__inspection .issue button[type='submit'], .issue .pet__inspection button[type='submit'], .pet__ambulance .issue button[type='submit'], .issue .pet__ambulance button[type='submit'], .pet__ambulance-doctor .issue button[type='submit'], .issue .pet__ambulance-doctor button[type='submit'] {
+        margin: 20px 20px 10px 25px;
+        width: 200px;}
+      .pet__info input[type="date"], .pet__new input[type="date"], .pet__inspection input[type="date"], .pet__ambulance input[type="date"], .pet__ambulance-doctor input[type="date"], .pet__info .issue button[type="date"], .issue .pet__info button[type="date"], .pet__new .issue button[type="date"], .issue .pet__new button[type="date"], .pet__inspection .issue button[type="date"], .issue .pet__inspection button[type="date"], .pet__ambulance .issue button[type="date"], .issue .pet__ambulance button[type="date"], .pet__ambulance-doctor .issue button[type="date"], .issue .pet__ambulance-doctor button[type="date"] {
+        width: 246px; }
+    .pet__info textarea, .pet__new textarea, .pet__inspection textarea, .pet__ambulance textarea, .pet__ambulance-doctor textarea {
+      height: 100px;
+      width: 246px;
+      margin-left: 10px;
+      font: 500 20px Calibri; }
+    .pet__info h4 {
+      text-align: center;
+    }
+  .pet__new legend {
+    padding: 10px 10px;
+    font: 600 22px Calibri; }
+  .pet__new input[type='submit'], .pet__new .issue button[type='submit'], .issue .pet__new button[type='submit'] {
+    margin: 40px 0 20px 27%; }
+  .pet__inspection input[type="date"], .pet__inspection .issue button[type="date"], .issue .pet__inspection button[type="date"] {
+    width: 246px; }
+  .pet__inspection #sendForm {
+    margin: 30px auto;
+  }
+  .pet__vaccination {
+    margin-top: 10px; }
+    .pet__vaccination fieldset {
+      margin-top: 10px; }
+    .pet__vaccination legend {
+      margin: 20px 10px 0 10px; }
+    .pet__vaccination input[type='date'] {
+      width: 170px; }
+    .pet__vaccination input[type='text'] {
+      width: 170px;
+      height: 28px; }
+    .pet__vaccination input[type='submit'] {
+      height: 33px;
+      width: 120px; }
+  .pet__ambulance {
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 400px;
+    width: auto; }
+    .pet__ambulance p {
+      line-height: 0.8;
+    }
+    .pet__ambulance input, .pet__ambulance .issue button, .issue .pet__ambulance button {
+      float: left;
+      width: 20px;}
+      .pet__ambulance input[type='text'], .pet__ambulance .issue button[type='text'], .issue .pet__ambulance button[type='text'] {
+        width: 120px;
+        float: right; }
+      .pet__ambulance input[type='submit'], .pet__ambulance .issue button[type='submit'], .issue .pet__ambulance button[type='submit'] {
+        margin: 0 auto; }
+      .pet__ambulance-types input[type='text'] {
+        width: 200px;
+      }
+    .pet__ambulance-price1, .pet__ambulance-price2, .pet__ambulance-price3, .pet__ambulance-price4, .pet__ambulance-price5, .pet__ambulance-price6, .pet__ambulance-price7, .pet__ambulance-price8 {
+      opacity: 0;
+      float: right;
+      margin-top: -45px; }
+    .pet__ambulance #pet__ambulance-type1:checked ~ .pet__ambulance-price1,
+    .pet__ambulance #pet__ambulance-type2:checked ~ .pet__ambulance-price2,
+    .pet__ambulance #pet__ambulance-type3:checked ~ .pet__ambulance-price3,
+    .pet__ambulance #pet__ambulance-type4:checked ~ .pet__ambulance-price4,
+    .pet__ambulance #pet__ambulance-type5:checked ~ .pet__ambulance-price5,
+    .pet__ambulance #pet__ambulance-type6:checked ~ .pet__ambulance-price6,
+    .pet__ambulance #pet__ambulance-type7:checked ~ .pet__ambulance-price7,
+    .pet__ambulance #pet__ambulance-type8:checked ~ .pet__ambulance-price8 {
+      opacity: 1; }
+    .pet__ambulance-doctor {
+      margin: 20px 0 0 3px;
+      min-height: 220px; }
+      .pet__ambulance-doctor input[type="date"], .pet__ambulance-doctor .issue button[type="date"], .issue .pet__ambulance-doctor button[type="date"], .pet__ambulance-doctor input[type="text"], .pet__ambulance-doctor .issue button[type="text"], .issue .pet__ambulance-doctor button[type="text"] {
+        width: 248px; }
+      .pet__ambulance-doctor textarea {
+        height: auto;
+        min-height: 205px;
+      }
+  .pet__signs {
+    width: 100%;
+    display: none; }
+
+.pet__ambulance-visible {
+  opacity: 1;
+}
+
+.issue {
+  width: 100%;
+  text-align: center;
+  margin: 10px auto 30px; }
+  .issue input, .issue button {
+    width: 150px;
+    height: 40px;
+    margin: 0 20px;
+    cursor: pointer;
+    font: 500 22px Calibri; }
+
+select:focus, .login_form input[type='text']:focus, .login_form .issue button[type='text']:focus, .issue .login_form button[type='text']:focus, .login_form input[type='submit']:focus, .login_form .issue button[type='submit']:focus, .issue .login_form button[type='submit']:focus,
+input:focus,
+.issue button:focus,
+textarea:focus {
+  outline: none; }
+
+input[type='submit'], .issue button[type='submit'] {
+  cursor: pointer; }
+
+:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+:focus::-moz-placeholder {
+  color: transparent; }
+
+:focus:-moz-placeholder {
+  color: transparent; }
+
+:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/*# sourceMappingURL=style.css.map */

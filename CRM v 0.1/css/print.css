@@ -1,0 +1,76 @@
+header {
+  display: none; }
+
+.owner_info {
+  font: 500 18px Calibri; }
+  .owner_info form {
+    margin-top: -20px; }
+  .owner_info label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .owner_info label:nth-of-type(2),
+  .owner_info label:nth-of-type(4) {
+    display: none; }
+  .owner_info input[type='text'] {
+    font: 500 18px Calibri;
+    height: 20px;}
+
+.pet__info,
+.pet__info label {
+  font: 500 18px Calibri;
+}
+.pet__info form {
+  min-width: 680px;
+}
+.pet__info textarea {
+  height: auto;
+  min-height: 20px;
+  min-width: 450px;
+  font: 500 18px Calibri;
+}
+.pet__info input[type='date'],
+.pet__info input[type='text']{
+  min-width: 450px;
+  height: 20px;
+  font: 500 18px Calibri;
+}
+
+.pet__ambulance {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font: 500 18px Calibri;
+  margin-top: -10px;}
+  .pet__ambulance-types, .pet__ambulance-doctor {
+    width: 40%; }
+    .pet__ambulance-types input[type='submit'], .pet__ambulance-doctor input[type='submit'] {
+      display: none; }
+  .pet__ambulance-doctor {
+    margin-top: 2px; }
+  .pet__ambulance-doctor label {
+    font: 500 18px Calibri; }
+    .pet__ambulance-doctor input[type='date'], .pet__ambulance-doctor input[type='text'] {
+      width: 200px;
+      height: 20px;}
+    .pet__ambulance-doctor textarea {
+      width: 200px;
+      height: auto;
+      min-height: 40px;}
+
+.issue {
+  display: none; }
+
+.pet__signs {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: -120px 0 0 320px;
+  font: 500 18px Calibri; }
+  .pet__signs label {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px; }
+  .pet__signs input {
+    height: 20px; }
+

@@ -1,0 +1,81 @@
+<?php require_once '../access.comp.php';?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Приём, часть 2</title>
+	<link rel="stylesheet" type="text/css" href="<?=_CSS?>style.css">
+	<script src="<?=_SCRIPT?>script.js"></script>
+</head>
+<body>
+	<?php require_once PATH_ROOT.'/header.html.php'; ?>
+	<?php require_once 'reception.comp.php'; ?>
+	<div>
+		<span>Владелец: </span>
+		<a href="<?=WWW_ROOT?>/profile/?idOwner=<?=$owner['id']?>"><?=$owner['name']?></a>
+		<?php if(!empty($owner['animals'])): ?>
+			<span>Питомцы: </span>
+			<?php foreach ($owner['animals'] as $animal): ?>
+				<a href="?idAnimal=<?=$animal['id']?>&idOwner=<?=$owner['id']?>"><?=$animal['name']?></a>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	</div>
+	<br>
+	<div>
+		<h3>Приём <b><?=$animalInfo['name']?></b></h3>
+		<div>
+			<span>Порода: <em><?=$animalInfo['breed']?></em>,</span>
+			<span>Пол: <em><?=$animalInfo['genderName']?></em>,</span>
+			<span>Дата рождения: <em><?=$animalInfo['bd']?> (возраст <?=$animalInfo['age']?>)</em></span>
+		</div>
+	</div>
+	<br>
+	<?php require_once 'vaccination.comp.php'; ?>
+	<div class="vaccination">
+		<?php if(empty($vac_date)): ?>
+			<span>Записей о вакцинации не найдено</span>
+		<?php else: ?>
+			<span>Дата последней вакцинации <?=$vac_date['date']?>, тип <em><?=$vac_date['text']?></em></span>
+		<?php endif; ?>
+		<fieldset>
+			<legend>Введение вакцины для питомца</legend>
+			<form method="post">
+				<input type="date" name="vac_date" value="<?=date("Y-m-d")?>">
+				<input type="text" name="vac_text" required="">
+				<input type="hidden" name="vac_idAnimal" value="<?=$animalInfo['id']?>">
+				<input type="hidden" name="action" value="add_vac">
+				<input type="submit" value="Добавить">
+			</form>
+		</fieldset>		
+	</div>
+	<br>
+	<br>
+	<?php require_once 'add_reception.comp.php'; ?>
+	<div class="reception2">
+		<form method="post" id="reception2Form">
+			<fieldset>
+				<legend>Приём (продолжение)</legend>
+				<label>Клинические признаки: <input type="text" name="text3"></label>
+				<label>Лечебная помощь: <input type="text" name="text4"></label>
+				<label>Рекомендации: <input type="text" name="text5"></label>
+				<label>Окончательный диагноз: <textarea name="text6" cols="40" rows="3"></textarea></label>
+							
+				<p id="servicesCode">
+					Код услуги:
+					<input list="price">
+					<datalist id="price">
+					</datalist>
+				</p>
+				<div id='choice'>
+					
+				</div>
+				<input type="hidden" name="action" value="add_reception2">
+				<input type="button" value="Добавить" id='sendForm'>
+			</fieldset>
+		</form>
+	</div>
+
+<?php require_once PATH_ROOT.'/succes_action.php'; ?>
+<?//=var_dump($GLOBALS)?>
+</body>
+</html>
